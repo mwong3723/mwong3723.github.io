@@ -1,11 +1,35 @@
 <!DOCTYPE html>
+<head>
+    <!-- This allows us to access our TabScript js file and defer as it will load after our html page has loaded first-->
+    <script src="TabScript.js" defer></script>
+    <!-- This allows us to access our TabStyles css file -->
+    <link href="TabStyles.css" rel="stylesheet">
+</head>
+
 <html>
     <body>
-        <h1>
-            My Portfolio:
-        </h1>
-        <h3>
-            Matthew Wong
-        </h3>
+        <ul class="tabs">
+            <!-- these data-tab-page are attributes used later on to identify our items in our unordered list (ul) -->
+            <li data-tab-target="#home" class="active tab">Home</li>
+            <li data-tab-target="#projects" class="tab">Projects</li>
+            <li data-tab-target="#aboutMe" class="tab">About me</li>
+        </ul>
+
+        <!-- Div class to seperate our different pages-->
+        <div class="tab-content">
+            <div id="HomePage" data-tab-content class="active">
+                <h1>Home</h1>
+                <p>*Insert Later*</p>
+            </div>
+            <div id="PorjectPage" data-tab-content>
+                <h1>Project</h1>
+                <p>*Insert Later*</p>
+            </div>
+            <div id="AboutMePage" data-tab-content>
+                <h1>About me</h1>
+                <p>*Insert Later*</p>
+            </div>
+        </div>
+
     </body>    
 </html>
